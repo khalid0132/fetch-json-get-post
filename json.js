@@ -22,13 +22,17 @@ function nowPostToServer(postInfo) {
     .then((response) => response.json())
     .then((data) => console.log(data)); // main name json chilo instead dada
 }
+
+
+
+
 // Get by default
 
 // fetch("https://jsonplaceholder.typicode.com/users")
 //   .then((response) => response.json())
 //   //   .then((json) => displayUsers(json));
-//   .then((json) => usersEmail(json));
-// //   .catch((error) => console.log(error));
+//   .then((json) => usersEmail(json))
+//   .catch((error) => console.log(error));
 
 function usersEmail(email) {
   const personEmail = email.map((m) => m.email);
@@ -38,8 +42,8 @@ function usersEmail(email) {
     const element = personEmail[i];
     const emailList = document.createElement("li");
     emailList.innerText = element;
-    // console.log(emailList.innerText);
-    mail.appendChild(emailList);
+    console.log(emailList.innerText);
+    // mail.appendChild(emailList);
   }
 }
 
